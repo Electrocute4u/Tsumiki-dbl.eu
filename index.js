@@ -47,6 +47,7 @@ class Client extends EventEmitter {
     autoPost(client, postTime="", log=Boolean, date=Boolean){
         let convertedDate = new Date().toLocaleString("en-GB", { timeZone: "Europe/Oslo" });
         let autoPostTimer;
+        let console_message;
         if (!con) throw new Error(`Please login before you begin posting any Data!\nMake sure that you login to the API first! Then have this event below it.`)
         
         // Reverts to default: auto-post every 1 hour. (60 minutes)
