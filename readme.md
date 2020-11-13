@@ -1,5 +1,5 @@
 # tsumiki-dbl-eu
-A rewritten and **highly improved npm package** for posting bot stats to discord-botlist.eu API endpoint. \
+A rewritten and **highly improved npm package** for posting bot stats to **discord-botlist.eu** API endpoint. \
 Mainly rewritten for [Tsumiki](https://github.com/Electrocute4u/Tsumiki), a Discord Bot written in Javascript.
 
 **This npm package can be used by anybody and is not just made for** [Tsumiki](https://github.com/Electrocute4u/Tsumiki).
