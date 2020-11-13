@@ -102,8 +102,10 @@ dbapi.on("ready", () => {
     // Logs when the bot has sucessfully connected.
     console.log("Sucessfully logged in to: Discord-botlist.eu API")
     
-    // Automatically posts to the botlist API every x
+    // Automatically posts to the botlist API every x with logging set to "true" with fancy date set to "true"
     dbapi.autoPost(client, "12 hours", true, true)
+
+    // This will log to the console every 12 hours that it has posted to the botlist with a fancy date (converted to GMT+1)
 })
 
 dbapi.login(dbl_token, botID)
@@ -118,16 +120,16 @@ const dbl_token = "Your-api-token-here"
 const botID = client.bot.user.id
 
 dbapi.on("ready", () => {
-     // Logs when the bot has sucessfully connected.
+     // Posts to console when the bot has sucessfully connected.
     console.log("Sucessfully logged in to: Discord-botlist.eu API")
     
     setInterval(() => {
     // Hint: If you haven't sharded yet, don't include the shard property (or leave it as 0).
     
-    // on v12 or above:
+    // Use this when on v12 or above:
     dbapi.postData(client.guilds.cache.size, client.shards.cache.size)
     
-    // on v11 and below:
+    // Use this when on v11 and below:
     dbapi.postData(client.guilds.size, client.shards.size)
     
     console.log("Sucessfully posted to Discord-botlist.eu!")
@@ -140,6 +142,29 @@ dbapi.login(dbl_token, botID)
 dbapi.on("vote", vote => {
     console.log(vote)
 })
+```
+### Getting all bot votes example
+```javascript
+const Discord = require('discord.js')
+const client = new Discord.Client();
+const dbeu = require('tsumiki-dbl-eu')
+const dbapi = new dbeu.Client();
+const dbl_token = "Your-api-token-here"
+const botID = client.bot.user.id
+
+dbapi.on("ready", () => {
+     // Posts to console when the bot has sucessfully connected.
+    console.log("Sucessfully logged in to: Discord-botlist.eu API")
+    
+    // Do something with ready event ...
+})
+
+dbapi.on("vote", vote => {
+    console.log(vote)
+    // Do something with vote ...
+})
+
+dbapi.login(dbl_token, botID)
 ```
 ### The returned Vote object
 ```javascript
