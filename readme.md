@@ -91,41 +91,74 @@ These are the supported auto post intervals and their respective aliases that yo
 ## Example for a Discord bot with a client
 ### Automatically post to the API
 ```javascript
+// Calling in discord.js and creating the client for it
 const Discord = require('discord.js')
 const client = new Discord.Client();
+
+// Calling in the module and creating the client
 const dbeu = require('tsumiki-dbl-eu')
 const dbapi = new dbeu.Client();
-const dbl_token = "Your-api-token-here"
-const botID = client.bot.user.id
 
+// Your discord-botlist-eu token:
+const dbl_token = "Your-api-token-here"
+
+// This is the discord.js client ready state.
+// Important to run the code within this or after the ready state.
+client.on("ready", async () => {
+
+// Important this is called within the ready or after the ready state.
+// Otherwise it'll return null/error the application out.
+const botID = client.user.id
+
+// The dbapi client will emit a ready event when it has sucessfully logged in to the API.
 dbapi.on("ready", () => {
-    // Logs when the bot has sucessfully connected.
+
+     // Posts to console when the bot has sucessfully connected.
     console.log("Sucessfully logged in to: Discord-botlist.eu API")
     
     // Automatically posts to the botlist API every x with logging set to "true" with fancy date set to "true"
     dbapi.autoPost(client, "12 hours", true, true)
 
     // This will log to the console every 12 hours that it has posted to the botlist with a fancy date (converted to GMT+1)
-})
+});
 
-dbapi.login(dbl_token, botID)
+    // Logging in to the API
+    dbapi.login(dbl_token, botID)
+});
 ```
 ### Manually post to the API
 ```javascript
+// Calling in discord.js and creating the client for it
 const Discord = require('discord.js')
 const client = new Discord.Client();
+
+// Calling in the module and creating the client
 const dbeu = require('tsumiki-dbl-eu')
 const dbapi = new dbeu.Client();
+
+// Your discord-botlist-eu token:
 const dbl_token = "Your-api-token-here"
+
+// This is the discord.js client ready state.
+// Important to run the code within this or after the ready state.
+client.on("ready", async () => {
+
+// Important this is called within the ready or after the ready state.
+// Otherwise it'll return null/error the application out.
 const botID = client.user.id
 
+// The dbapi client will emit a ready event when it has sucessfully logged in to the API.
 dbapi.on("ready", () => {
+
      // Posts to console when the bot has sucessfully connected.
     console.log("Sucessfully logged in to: Discord-botlist.eu API")
     
+    // This set's the post interval.
+    // replace "30000" with your own time, remember that it is in ms (milliseconds)
     setInterval(() => {
-    // Hint: If you haven't sharded yet, don't include the shard property (or leave it as 0).
     
+    // Tip: If you haven't sharded yet, don't include the shard property (or leave it as 0).
+
     // Use this when on v12 or above:
     dbapi.postData(client.guilds.cache.size, client.shards.cache.size)
     
@@ -135,7 +168,10 @@ dbapi.on("ready", () => {
     console.log("Sucessfully posted to Discord-botlist.eu!")
     }, 30000);
 })
-dbapi.login(dbl_token, botID)
+    // Logging in to the API
+    dbapi.login(dbl_token, botID)
+
+});
 ```
 ## Get votes
 ```javascript
@@ -145,14 +181,28 @@ dbapi.on("vote", vote => {
 ```
 ### Getting all bot votes example
 ```javascript
+// Calling in discord.js and creating the client for it
 const Discord = require('discord.js')
 const client = new Discord.Client();
+
+// Calling in the module and creating the client
 const dbeu = require('tsumiki-dbl-eu')
 const dbapi = new dbeu.Client();
-const dbl_token = "Your-api-token-here"
-const botID = client.bot.user.id
 
+// Your discord-botlist-eu token:
+const dbl_token = "Your-api-token-here"
+
+// This is the discord.js client ready state.
+// Important to run the code within this or after the ready state.
+client.on("ready", async () => {
+
+// Important this is called within the ready or after the ready state.
+// Otherwise it'll return null/error the application out.
+const botID = client.user.id
+
+// The dbapi client will emit a ready event when it has sucessfully logged in to the API.
 dbapi.on("ready", () => {
+
      // Posts to console when the bot has sucessfully connected.
     console.log("Sucessfully logged in to: Discord-botlist.eu API")
     

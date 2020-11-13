@@ -54,17 +54,17 @@ class Client extends EventEmitter {
         
         // Sets the autoPostTimer in minutes
         else if(postTime) {
-            time0 = [`5` , `5min`, `5m`, `5minute`, `5minutes`, `05m`, `05min`, `05minutes`, `five`, `fiveminutes`, `fiveminute`]
-            time1 = [`15` , `15min`, `15m`, `15minute`, `15minutes`, `fifteen` , `fifteenminutes`, `fifteenminute`]
-            time2 = [`30` , `30min`, `30m`, `30minute`, `30minutes`, `thirty`, `thirtyminutes`, `thirtyminute`]
-            time3 = [`1` , `1h`, `1hour`, `1hours`, `01h`, `onehour`, `onehours`, `60`, `60m`, `60min`, `60minutes`, `60minute`, `sixty`, `sixtyminutes`, `sixtyminute`]
-            time4 = [`2` , `2h`, `2hour`, `2hours`, `02h`, `twohour`, `twohours`]
-            time5 = [`3` , `3h`, `3hour`, `3hours`, `03h`, `three hour`, `three hours`]
-            time6 = [`4` , `4h`, `4hour`, `4hours`, `04h`, `four hour`, `four hours`]
-            time7 = [`5` , `5h`, `5hour`, `5hours`, `05h`, `five hour`, `five hours`]
-            time8 = [`10` , `10h`, `10hour`, `10hours`, `10h`, `ten hour`, `ten hours`]
-            time9 = [`12` , `12h`, `12hour`, `12hours`, `12h`, `halfday`, `half-day`, `twelve hour`, `twelve hours`]
-            time10 = [`24` , `24h`, `24hour`, `24hours`, `24h`, `1day`, `1d`, `entireday`]
+            let time0 = [`5` , `5min`, `5m`, `5minute`, `5minutes`, `05m`, `05min`, `05minutes`, `five`, `fiveminutes`, `fiveminute`]
+            let time1 = [`15` , `15min`, `15m`, `15minute`, `15minutes`, `fifteen` , `fifteenminutes`, `fifteenminute`]
+            let time2 = [`30` , `30min`, `30m`, `30minute`, `30minutes`, `thirty`, `thirtyminutes`, `thirtyminute`]
+            let time3 = [`1` , `1h`, `1hour`, `1hours`, `01h`, `onehour`, `onehours`, `60`, `60m`, `60min`, `60minutes`, `60minute`, `sixty`, `sixtyminutes`, `sixtyminute`]
+            let time4 = [`2` , `2h`, `2hour`, `2hours`, `02h`, `twohour`, `twohours`]
+            let time5 = [`3` , `3h`, `3hour`, `3hours`, `03h`, `three hour`, `three hours`]
+            let time6 = [`4` , `4h`, `4hour`, `4hours`, `04h`, `four hour`, `four hours`]
+            let time7 = [`5` , `5h`, `5hour`, `5hours`, `05h`, `five hour`, `five hours`]
+            let time8 = [`10` , `10h`, `10hour`, `10hours`, `10h`, `ten hour`, `ten hours`]
+            let time9 = [`12` , `12h`, `12hour`, `12hours`, `12h`, `halfday`, `half-day`, `twelve hour`, `twelve hours`]
+            let time10 = [`24` , `24h`, `24hour`, `24hours`, `24h`, `1day`, `1d`, `entireday`]
 
             // autoPostTimer argument to check against arrays with modification to the string. (RegEX expression to remove all whitespaces from string)
             let searchTime = postTime.toLowerCase().replace(/\s/g, "")
