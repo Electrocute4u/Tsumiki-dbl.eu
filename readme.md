@@ -53,7 +53,7 @@ To install the npm package: do the following command in a terminal: \
 **On v11 or below:** use `<client>.guilds.size` and  `<client>.shards.size`
 
 ## Supported Autopost Intervals
-These are the supported auto-post intervals and their respective aliases to for "postTime" property.
+These are the supported auto post intervals and their respective aliases that you can use for postTime.
 
 **5 Minutes:** \
 `5` , `5min`, `5m`, `5minutes`, `05m`, `05min`, `05minutes`, `five`, `five minutes`
@@ -62,7 +62,7 @@ These are the supported auto-post intervals and their respective aliases to for 
 `15` , `15min`, `15m`, `15minutes`, `fifteen`, `fifteen minutes`
 
 **30 Minutes:** \
-`30` , `30min`, `30m`, `30minutes`m `thirty`, `thirty minutes`
+`30` , `30min`, `30m`, `30minutes` `thirty`, `thirty minutes`
 
 **60 Minutes (1 hour):** \
 `1` , `1h`, `1 hour`, `01h`, `one hour`, `60`, `60m`, `60min`, `60 minutes`, `sixty`, `sixty minutes`
