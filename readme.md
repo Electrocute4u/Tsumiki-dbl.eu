@@ -83,7 +83,7 @@ These are the supported auto post intervals and their respective aliases that yo
 `10` , `10h`, `10 hours`, `10h`, `ten hours`
 
 **12 Hours:** \
-`12` , `12h`, `12 hours`, `12h`, `halfday`, `half-day`, , `twelve hours`
+`12` , `12h`, `12 hours`, `12h`, `halfday`, `half-day`, `twelve hours`
 
 **24 Hours:** \
 `24` , `24h`, `24 hours`, `24h`, `1day`, `1d`, `entire day`
