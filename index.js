@@ -54,11 +54,11 @@ class Client extends EventEmitter {
         
         // Sets the autoPostTimer in minutes
         else if(postTime) {
-            time0 = [`5` , `5min`, `5m`, `5minute`, `5minutes`, `05m`, `05min`, `05minutes`, `five`, `five minutes`, `five minute`]
-            time1 = [`15` , `15min`, `15m`, `15minute`, `15minutes`, `fifteen` , `fifteen minutes`, `fifteen minute`]
-            time2 = [`30` , `30min`, `30m`, `30minute`, `30minutes`, `thirty`, `thirty minutes`, `thirty minute`]
-            time3 = [`1` , `1h`, `1hour`, `1hours`, `01h`, `one hour`, `one hours`]
-            time4 = [`2` , `2h`, `2hour`, `2hours`, `02h`, `two hour`, `two hours`]
+            time0 = [`5` , `5min`, `5m`, `5minute`, `5minutes`, `05m`, `05min`, `05minutes`, `five`, `fiveminutes`, `fiveminute`]
+            time1 = [`15` , `15min`, `15m`, `15minute`, `15minutes`, `fifteen` , `fifteenminutes`, `fifteenminute`]
+            time2 = [`30` , `30min`, `30m`, `30minute`, `30minutes`, `thirty`, `thirtyminutes`, `thirtyminute`]
+            time3 = [`1` , `1h`, `1hour`, `1hours`, `01h`, `onehour`, `onehours`, `60`, `60m`, `60min`, `60minutes`, `60minute`, `sixty`, `sixtyminutes`, `sixtyminute`]
+            time4 = [`2` , `2h`, `2hour`, `2hours`, `02h`, `twohour`, `twohours`]
             time5 = [`3` , `3h`, `3hour`, `3hours`, `03h`, `three hour`, `three hours`]
             time6 = [`4` , `4h`, `4hour`, `4hours`, `04h`, `four hour`, `four hours`]
             time7 = [`5` , `5h`, `5hour`, `5hours`, `05h`, `five hour`, `five hours`]
