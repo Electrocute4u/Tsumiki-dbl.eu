@@ -102,8 +102,8 @@ class Client extends EventEmitter {
         }
         // Sets the date parameter, if its included
         if(!date || date && date === false) console_message = `Automatically posted stats to discord-botlist.eu!`
-        if(date && date !== Boolean) console.warn(`"${date}" is not an accepted value.\nPlease use a bolean (true or false)`)
-        if(date && date === true) console_message = `[${convertedDate}] Automatically posted stats to discord-botlist.eu!`
+        if(date && typeof(date) !== 'boolean') console.warn(`"${date}" is not an accepted value.\nPlease use a bolean (true or false)`)
+        if(date && typeof(date) == 'boolean' && date === true) console_message = `[${convertedDate}] Automatically posted stats to discord-botlist.eu!`
 
         setInterval(function(){
         con.send(JSON.stringify({
