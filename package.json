@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "request": "^2.88.2",
+    "tough-cookie": "^4.0.0",
+    "websocket": "^1.0.32"
+  },
+  "deprecated": false,
+  "description": "Tsumiki's Discord-botlist.eu NPM package",
+  "keywords": [
+    "discord",
+    "discord-botlist",
+    "botlist",
+    "discordbotlist",
+    "tsumiki",
+    "botlist-eu",
+    "dbl-eu",
+    "dbl-eu-api"
+  ],
+  "license": "Apache License 2.0",
+  "main": "index.js",
+  "name": "tsumiki-dbl-eu",
+  "scripts": {
+    "test": "echo No test script"
+  },
+  "version": "1.0.0"
+}
