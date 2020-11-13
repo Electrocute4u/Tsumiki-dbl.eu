@@ -117,7 +117,7 @@ const client = new Discord.Client();
 const dbeu = require('tsumiki-dbl-eu')
 const dbapi = new dbeu.Client();
 const dbl_token = "Your-api-token-here"
-const botID = client.bot.user.id
+const botID = client.user.id
 
 dbapi.on("ready", () => {
      // Posts to console when the bot has sucessfully connected.
